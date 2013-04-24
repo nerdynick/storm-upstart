@@ -2,7 +2,8 @@
 storm-upstart
 =============
 
-This is just a small collection of `upstart <http://upstart.ubuntu.com/>`_ config scripts to startup a storm cluster and its components. 
+This is just a small collection of `Upstart <http://upstart.ubuntu.com/>`_ config scripts to startup a storm cluster and its components. 
+These have been designed to work with Ubuntu but should work with most any system using Upstart.
 
 =================  ============  ===============
 Config File        Service Name  Description
@@ -15,8 +16,9 @@ storm-ui.conf      storm-ui      Web UI Node
 Install
 -------
 
-By default these upstart configs assume you will be running your process as the user storm and the group storm. As well as storm is installed in /opt/storm.
-You do not have to stick to this setup. You just simple need to change the INSTALL_DIR value and setuid/setgid blocks to your respected values.
+By default these Upstart configs assume you will be running your processes as the user storm and the group storm, *sudo useradd -r storm*. 
+As well as storm is installed in /opt/storm from the available zip file download. You do not have to stick to this setup. 
+You just simply need to change the INSTALL_DIR and/or LOCAL_CACHE value and setuid/setgid blocks to your respected values.
 
 Installation is as simple as coping the respected config to /etc/init on the hosts you wish to run that given service.
 
