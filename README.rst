@@ -2,7 +2,7 @@
 storm-upstart
 =============
 
-This is just a small collection of upstart config scripts to startup a storm cluster and its components. 
+This is just a small collection of `upstart <http://upstart.ubuntu.com/>`_ config scripts to startup a storm cluster and its components. 
 
 Install
 -------
@@ -12,20 +12,20 @@ You do not have to stick to this setup. You just simple need to change the INSTA
 
 Installation is as simple as coping the respected config to /etc/init on the hosts you wish to run that given service.
 
-- storm-nimbus.conf - Nimbus Node
-- storm-super - Supervisor Node
-- storm-ui - Web UI Node. Easiest is to just place this on the same node as you wish to run your nimbus deamon
+=================  ============  =================================================================================================
+Config File        Service Name  Description
+=================  ============  =================================================================================================
+storm-nimbus.conf  storm-nimbus  Nimbus Node
+storm-super.conf   storm-super   Supervisor Node
+storm-ui.conf      storm-ui      Web UI Node. Easiest is to just place this on the same node as you wish to run your nimbus deamon
+=================  ============  =================================================================================================
 
 Starting/Stopping
 -----------------
 
 start
-    sudo start storm-nimbus
-    sudo start storm-ui
-    sudo start storm-super
+    sudo start <SERVICE_NAME>
 
 stop
-    sudo stop storm-nimbus
-    sudo stop storm-ui
-    sudo stop storm-super
+    sudo stop <SERVICE_NAME>
 
